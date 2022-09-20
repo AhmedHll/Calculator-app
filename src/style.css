@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+:root {
+    --main-color: #364664;
+    --secondary-color: #EAE3DB;
+    --ternary-background-color: #D03F2F;
+    --ternary-background-color-active: #F96B5B;
+    --secondary-background-color: #242D44;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border-radius: .5rem;
+    font-family: 'Spartan', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0rem;
+    align-items: center;
+    text-align: center;
+}
+
+#name {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    /* margin-top: -1rem; */
+    font-weight: 700;
+}
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 1.3rem !important;
+    width: 1.4rem !important;
+    appearance: none;
+    background-color: var(--ternary-background-color) !important;
+    border-radius: 50%;
+    opacity: 0;
+    margin-bottom: .5rem;
+
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+#container {
+    background-color: var(--main-color);
+    height: 40rem;
+    min-width: 24rem;
+    max-width: 24rem;
+    padding: 2rem;
+
+}
+
+#result {
+    height: 5rem;
+    width: 100%;
+    background-color: var(--secondary-background-color);
+    color: var(--secondary-color);
+    font-size: 2rem;
+    justify-content: right;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 1rem;
+
+}
+
+#result1 {
+    position: absolute;
+    z-index: 1;
+    width: 20rem !important;
+    display: flex;
+    justify-content: right;
+    background-color: var(--secondary-background-color);
+    color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    padding: 0 1rem;
+}
+
+#one,
+#two,
+#three,
+#four,
+#five,
+#six,
+#seven,
+#eight,
+#nine,
+#ten,
+#del,
+#multiple,
+#division,
+#dot,
+#subtract,
+#add,
+#zero,
+#themOne,
+#themTwo,
+#themThree {
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--secondary-color);
+    margin-top: .6rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+#multiple {
+    position: relative;
+    color: rgba(251, 54, 0, 0);
+}
+
+#multiple::after {
+    content: "X";
+    position: absolute;
+    right: 20px;
+    color: black;
+
+}
+
+#del,
+#reset,
+#equal {
+    background-color: #647299;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+#reset,
+#equal {
+    height: 4rem;
+    width: 8.67rem;
+    color: white;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+#equal {
+    background-color: #D13F30;
+}
+
+#calc {
+    background-color: var(--secondary-background-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding: 0 1rem 1rem 1rem;
+
+}
+
+
+#data-previous-operand {
+    background-color: #D13F30;
+}
+
+
+/* ///////////////////////////////////////////// */
+/* .switch {
+    display: flex;
+    align-items: center;
+}
+
+.switch .switcher__numbers {
+    display: flex;
+    width: 4.5rem;
+    justify-content: space-around;
+    font-size: .7rem;
+    line-height: 0;
+}
+
+.switch {
+    position: relative;
+    height: 2.6rem;
+}
+
+.switch #switch1,
+.switch #switch2,
+.switch #switch3 {
+    position: absolute;
+    z-index: -1;
+    -webkit-appearance: none;
+}
+
+.switch #switch1+label::after,
+.switch #switch2+label::after,
+.switch #switch3+label::after {
+    position: absolute;
+    content: ".";
+    opacity: 0;
+    width: 25px;
+    top: 10px;
+    z-index: 9;
+    cursor: pointer;
+}
+
+#switch1:checked~.switch__inner::after {
+    left: 5px;
+    top: .8rem;
+    transition: left 250ms ease-in-out;
+}
+
+.switch #switch2+label::after {
+    left: 22px;
+
+}
+
+.switch #switch2:checked~.switch__inner::after {
+    left: 25px;
+    top: .8rem;
+    transition: left 250ms ease-in-out;
+}
+
+.switch #switch3+label::after {
+    left: 45px;
+    top: .8rem;
+}
+
+.switch #switch3:checked~.switch__inner::after {
+    left: 50px;
+    top: .8rem;
+    transition: left 250ms ease-in-out;
+}
+
+.switch__inner {
+    height: 1.6rem;
+    width: 4.5rem;
+    background: var(--secondary-background-color);
+    border-radius: 13px;
+}
+
+.switch__inner::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 5px;
+    left: 0;
+    background-color: var(--ternary-background-color);
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    transform: translateX(0);
+    transition: transform .4s;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.switch__inner:hover::after {
+    background-color: var(--ternary-background-color-active);
+} */

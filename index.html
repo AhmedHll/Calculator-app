@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/calculator.png">
+  <title>Trojan's calculator app</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <div id="name">TROJAN</div>
+
+      <!-- <div class="switch">
+        <span class="switch__title">THEME</span>
+        <div class="switcher">
+          <div class="switcher__numbers">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+          <div class="switch">
+            <input type="radio" id="switch1" name="switch" checked />
+            <label for="switch1"></label>
+            <input type="radio" id="switch2" name="switch" />
+            <label for="switch2"></label>
+            <input type="radio" id="switch3" name="switch" />
+            <label for="switch3"></label>
+            <div class="switch__inner"></div>
+          </div>
+        </div>
+      </div> -->
+    </header>
+
+    <div data-previous-operand id="result1"></div>
+    <div data-current-operand id="result">0</div>
+    <div id="calc">
+      <button data-number="7" id="seven">7</button>
+      <button data-number id="eight">8</button>
+      <button data-number id="nine">9</button>
+      <button data-delete id="del">DEL</button>
+      <button data-number id="four">4</button>
+      <button data-number id="five">5</button>
+      <button data-number id="six">6</button>
+      <button data-operation id="add">+</button>
+      <button data-number id="one">1</button>
+      <button data-number id="two">2</button>
+      <button data-number id="three">3</button>
+      <button data-operation id="subtract">-</button>
+      <button data-number id="dot">.</button>
+      <button data-number id="zero">0</button>
+      <button data-operation id="division">÷</button>
+      <button data-operation id="multiple">*</button>
+      <button data-all-clear id="reset">RESET</button>
+      <button data-equals id="equal">=</button>
+    </div>
+  </div>
+  <script src="./src/app.js"></script>
+</body>
+
+</html>
